@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);  
 
-
+    ui->toolButton->setChecked(true);
     connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), this,
             SLOT(drawGraphicVoltPres()));
     connect(ui->verticalSlider, SIGNAL(valueChanged(int)), this,

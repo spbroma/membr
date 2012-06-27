@@ -610,17 +610,17 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QToolButton" name="toolButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>380</x>
       <y>170</y>
-      <width>75</width>
-      <height>23</height>
+      <width>25</width>
+      <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>...</string>
     </property>
    </widget>
   </widget>
