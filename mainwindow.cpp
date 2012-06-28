@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);  
 
-
+    ui->toleranceSlider->setVisible(false);
     connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), this,
             SLOT(drawGraphicVoltPres()));
     connect(ui->verticalSlider, SIGNAL(valueChanged(int)), this,
@@ -32,7 +32,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->openButton->setDefault(true);
     ui->saveResultButton->setDisabled(true);
     ui->saveTbutton->setDisabled(true);
-
+    double blabla;
+    blabla = 0;
 
 }
 
@@ -409,7 +410,7 @@ void MainWindow::calculate()
         scene2->addEllipse(x-pt/2, y-pt/2, pt, pt,QPen((Qt::black)),QBrush(Qt::black));
     }
 
-    scene2->addLine(0, /*linMaxAddKoef/50*/ 0, maxs.at(linMaxIndex), (TMax.at(linMaxIndex)*linMaxKoef + linMaxAddKoef)/50, QPen((Qt::yellow)) );
+    scene2->addLine(maxs.first(), -(TMax.first()*linMaxKoef + linMaxAddKoef)/500, maxs.at(linMaxIndex), -(TMax.at(linMaxIndex)*linMaxKoef + linMaxAddKoef)/500, QPen((Qt::yellow)) );
 
     double a;
     int h = ui->thicknessBox->value();
